@@ -15,6 +15,15 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		DC4B30D73C73CAF71D27AE2A /* Pods_Folio_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D64F87CACF5F983980561C /* Pods_Folio_Example.framework */; };
 		E56FFF1618C7A5ABB2E28D00 /* Pods_Folio_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A873A0C3D94227F80AEE3129 /* Pods_Folio_Tests.framework */; };
+		F778FD1D24929A6C002243A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		F778FD1E24929A6F002243A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
+		F778FD1F24929A74002243A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
+		F778FD2124929B7B002243A2 /* ExampleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F778FD2024929B7B002243A2 /* ExampleRepository.swift */; };
+		F778FD2224929B7B002243A2 /* ExampleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F778FD2024929B7B002243A2 /* ExampleRepository.swift */; };
+		F778FD242492A6C7002243A2 /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F778FD232492A6C7002243A2 /* OrderedDictionary.swift */; };
+		F778FD252492A6C7002243A2 /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F778FD232492A6C7002243A2 /* OrderedDictionary.swift */; };
+		F778FD272492A824002243A2 /* ExampleDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F778FD262492A824002243A2 /* ExampleDataTableViewCell.swift */; };
+		F778FD282492A824002243A2 /* ExampleDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F778FD262492A824002243A2 /* ExampleDataTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,8 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05C67883F57D19B177103EC5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		29711249533846EC3C31AED1 /* Folio.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Folio.podspec; path = ../Folio.podspec; sourceTree = "<group>"; };
+		05C67883F57D19B177103EC5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		29711249533846EC3C31AED1 /* Folio.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Folio.podspec; path = ../Folio.podspec; sourceTree = "<group>"; };
 		29D2861F3AE3DAA12FC5B9BA /* Pods-Folio_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Folio_Tests.release.xcconfig"; path = "Target Support Files/Pods-Folio_Tests/Pods-Folio_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Folio_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Folio_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,11 +51,14 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		71A4CE0E403402454C672602 /* Pods-Folio_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Folio_Example.release.xcconfig"; path = "Target Support Files/Pods-Folio_Example/Pods-Folio_Example.release.xcconfig"; sourceTree = "<group>"; };
-		7B16B084FBD599A3DF339AD6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		7B16B084FBD599A3DF339AD6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		96E8B970420AD7A3100BFFFE /* Pods-Folio_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Folio_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Folio_Tests/Pods-Folio_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A873A0C3D94227F80AEE3129 /* Pods_Folio_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Folio_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D430E8625D6896F2427AA2F9 /* Pods-Folio_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Folio_Example.debug.xcconfig"; path = "Target Support Files/Pods-Folio_Example/Pods-Folio_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E7D64F87CACF5F983980561C /* Pods_Folio_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Folio_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F778FD2024929B7B002243A2 /* ExampleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRepository.swift; sourceTree = "<group>"; };
+		F778FD232492A6C7002243A2 /* OrderedDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedDictionary.swift; sourceTree = "<group>"; };
+		F778FD262492A824002243A2 /* ExampleDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleDataTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,9 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				F778FD2024929B7B002243A2 /* ExampleRepository.swift */,
+				F778FD232492A6C7002243A2 /* OrderedDictionary.swift */,
+				F778FD262492A824002243A2 /* ExampleDataTableViewCell.swift */,
 			);
 			name = "Example for Folio";
 			path = Folio;
@@ -147,7 +162,6 @@
 				96E8B970420AD7A3100BFFFE /* Pods-Folio_Tests.debug.xcconfig */,
 				29D2861F3AE3DAA12FC5B9BA /* Pods-Folio_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,10 +227,13 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 552H65R858;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 552H65R858;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -227,6 +244,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -256,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F778FD1F24929A74002243A2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +351,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				F778FD242492A6C7002243A2 /* OrderedDictionary.swift in Sources */,
+				F778FD272492A824002243A2 /* ExampleDataTableViewCell.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				F778FD2124929B7B002243A2 /* ExampleRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +362,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F778FD1E24929A6F002243A2 /* AppDelegate.swift in Sources */,
+				F778FD1D24929A6C002243A2 /* ViewController.swift in Sources */,
+				F778FD252492A6C7002243A2 /* OrderedDictionary.swift in Sources */,
+				F778FD2224929B7B002243A2 /* ExampleRepository.swift in Sources */,
+				F778FD282492A824002243A2 /* ExampleDataTableViewCell.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,11 +505,15 @@
 			baseConfigurationReference = D430E8625D6896F2427AA2F9 /* Pods-Folio_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 552H65R858;
 				INFOPLIST_FILE = Folio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -493,11 +524,15 @@
 			baseConfigurationReference = 71A4CE0E403402454C672602 /* Pods-Folio_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 552H65R858;
 				INFOPLIST_FILE = Folio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -507,6 +542,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 96E8B970420AD7A3100BFFFE /* Pods-Folio_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 552H65R858;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -529,6 +565,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 29D2861F3AE3DAA12FC5B9BA /* Pods-Folio_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 552H65R858;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
