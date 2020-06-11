@@ -1,0 +1,16 @@
+PODS:
+  - Folio (0.1.0)
+
+DEPENDENCIES:
+  - Folio (from `../`)
+
+EXTERNAL SOURCES:
+  Folio:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Folio: f147f1537625cef00a109154d06d1192f9043b22
+
+PODFILE CHECKSUM: f84f7b184170c935ebd696bd7bfa94f40fbf432b
+
+COCOAPODS: 1.8.4

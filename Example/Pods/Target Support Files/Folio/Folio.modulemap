@@ -1,0 +1,6 @@
+framework module Folio {
+  umbrella header "Folio-umbrella.h"
+
+  export *
+  module * { export * }
+}

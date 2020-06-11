@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Folio_Example' do
+  pod 'Folio', :path => '../'
+
+  target 'Folio_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
