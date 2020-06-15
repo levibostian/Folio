@@ -26,7 +26,7 @@ jobs:
     - stage: deploy
       script: 
         # Use nvm to install and use the Node LTS version (nvm is installed on all Travis images)
-        - nvm install lts/*; npm i semantic-release-cocoapods @semantic-release/git @semantic-release/changelog; npx semantic-release;
+        - nvm install lts/*; npm i semantic-release-cocoapods@beta @semantic-release/git @semantic-release/changelog; npx semantic-release;
     - stage: pod-deploy
       script:
         - pod trunk push
