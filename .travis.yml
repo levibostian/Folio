@@ -1,14 +1,40 @@
-# references:
-# * https://www.objc.io/issues/6-build-tools/travis-ci/
-# * https://github.com/supermarin/xcpretty#usage
+osx_image: xcode11.5
+language: swift
 
-osx_image: xcode7.3
-language: objective-c
-# cache: cocoapods
-# podfile: Example/Podfile
-# before_install:
-# - gem install cocoapods # Since Travis is not always on latest version
-# - pod install --project-directory=Example
-script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/Folio.xcworkspace -scheme Folio-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
-- pod lib lint
+# https://github.com/aevea/commitsar/issues/230
+git:
+  depth: false
+
+cache: cocoapods
+podfile: Example/Podfile
+before_install:
+  - gem install cocoapods
+  - pod install --project-directory=Example
+
+env:
+  global:
+    # COCOAPODS_TRUNK_TOKEN - access token to deploy to cocoapods. 
+    # GITHUB_TOKEN - github user with collaborative status to repo. github token with push access to git repo. 
+
+jobs:
+  include:
+    - stage: push
+      script: 
+        # lint commits to make sure they are conventional 
+        - curl -sf https://gobinaries.com/aevea/commitsar | sh; commitsar;
+        - pod lib lint --allow-warnings
+    - stage: deploy
+      script: 
+        # Use nvm to install and use the Node LTS version (nvm is installed on all Travis images)
+        - nvm install lts/*; npm i semantic-release-cocoapods @semantic-release/git @semantic-release/changelog; npx semantic-release;
+    - stage: pod-deploy
+      script:
+        - pod trunk push
+
+stages:
+  - name: push
+    if: type IN (push) AND tag IS blank   
+  - name: deploy
+    if: type IN (push) AND branch IN (master, beta, alpha)
+  - name: pod-deploy
+    if: tag IS present
