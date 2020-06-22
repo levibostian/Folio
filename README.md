@@ -78,6 +78,16 @@ extension ViewController: UITableViewDelegate {
 }
 ```
 
+## How does this work? 
+
+Folio is quite simple. To help make sure Folio is not a black box, let's get into how Folio works. 
+
+[It is 1 short file](https://github.com/levibostian/Folio/blob/master/Folio/Classes/Folio.swift) that (1) determines the last section and last row of that section of your `UITableView` and then (2) notifies your set `delegate` when the `UITableView` is just about to display the cell in the last section and last row of your `UITableView`. 
+
+A `UITableView` instance displays a certain number of sections with a certain number of rows in each section. The number of sections and rows in each section does not matter to Folio except *the last section and last row* of the `UITableView`. 
+
+Check out the [source code file](https://github.com/levibostian/Folio/blob/master/Folio/Classes/Folio.swift) for Folio. It has some comments inside to explain this to you. 
+
 ## Example app
 
 This project comes with an iOS app you can run and view the source code to get an idea of a full implementation of pagination with Folio. 
