@@ -8,7 +8,8 @@ public protocol FolioDelegate: AnyObject {
 
 /**
  Tells you when you scroll to the bottom of the tableview.
- use by
+
+ Use by...
  1. setting delegate
  2. call `tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)` from your delegate
  */
@@ -31,10 +32,11 @@ public class Folio {
     private func detectIfDataReloaded(delegate: FolioDelegate, tableView: UITableView) {
         let oldNumberOfSections = numberOfSections
         let oldNumberOfRowsInLastSection = numberOfRowsInLastSection
-
+        // Folio only cares about the *last section* and the *last row* of the tableview. 
         let newNumberOfSections = delegate.numberOfSections(in: tableView)
         let newNumberOfRowsInLastSection = delegate.tableView(tableView, numberOfRowsInSection: newNumberOfSections - 1) // zero index the section number
-        if oldNumberOfSections != newNumberOfSections || oldNumberOfRowsInLastSection != newNumberOfRowsInLastSection {
+
+        if oldNumberOfSections != newNumberOfSections || oldNumberOfRowsInLastSection != newNumberOfRowsInLastSection { // A reload happened
             numberOfSections = newNumberOfSections
             numberOfRowsInLastSection = newNumberOfRowsInLastSection
 
@@ -47,8 +49,10 @@ public class Folio {
             return
         }
         
+        // Determine the last section and last row of that section in your tableview. That way we know when to call your delegate. 
         detectIfDataReloaded(delegate: delegate, tableView: tableView)
 
+        // Determine if `willDisplay` is about to display the last row of the last section of your tableview. If it is, let's call the delegate. 
         let isLastSection = indexPath.section == (numberOfSections! - 1)
         guard isLastSection else {
             return
@@ -60,7 +64,7 @@ public class Folio {
         }
 
         if isCloseToEnd {
-            // to prevent spamming the delegate
+            // to prevent spamming the delegate, only call once until you call `.reloadData()`
             if !alertedReachedBottom {
                 delegate.reachedBottom(in: tableView)
                 alertedReachedBottom = true
