@@ -63,6 +63,13 @@ extension ViewController: FolioDelegate {
         //
         // Note: This function is only called once until you call `tableView.reloadData()`. 
     }
+
+    // Optional.
+    func reachedTop(in tableView: UITableView) {
+        // Scrolled to the top of the UITableView. 
+        // 
+        // Note: This function is only called once until you call `tableView.reloadData()`.         
+    }
 }
 ```
 

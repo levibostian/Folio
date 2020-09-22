@@ -84,4 +84,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, FolioDeleg
         
         print("Going to next page...")
     }
+    
+    func reachedTop(in tableView: UITableView) {
+        print("Reached the top.")
+    }
 }
